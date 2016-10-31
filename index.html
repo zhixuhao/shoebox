@@ -1,0 +1,184 @@
+<!Doctype html>
+<html>
+<head>
+	<title>智能鞋柜</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+	<body>
+		<header>
+			<div>
+				<img src="">
+				<p>智能鞋柜</p>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav class="navigate">
+				<span class="nav_tab active" data-target="home" id="spanhome">开始</span>
+				<span class="nav_tab" data-target="shoein" id="spanshoein">放鞋</span>
+				<span class="nav_tab" data-target="shoeout" id="spanshoeout">取鞋</span>
+				<span class="nav_tab" data-target="help" id="spanhelp">帮助</span>
+				<span class="nav_tab" data-target="information" id="spaninformation">信息</span>
+			</nav>
+			<div class="content">
+				<div class="tab" id="home">
+					<div class="homewrapper">
+						<div class="left-panel">
+							<div class="welcome">
+								<h1>欢迎使用</h1>
+							</div>
+							<div class="buttons">
+								<button class="btn-shoein">取鞋</button>
+								<button class="btn-shoeout">放鞋</button>
+							</div>
+						</div>
+						<div class="right-panel">
+							<div class="panel-intro">
+								<h2>智能鞋柜介绍</h2>
+								<p>本产品详细介绍</p>
+								<p><button class="readmore">详细介绍</button></p>
+							</div>
+							<div class="panel-information">
+								<div class="mask"></div>
+								<p><button class="allshoes">查看所有</button></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab" id="shoein">
+					<div class="title-bar">
+						<span>放鞋</span>
+					</div>
+					<div class="content">
+						<div class="left">
+							<div class="shoein-text">
+								<p class="shoein-guide">
+									放鞋指导
+								</p>
+								<p class="shoein-information">
+									这是一双<span>男鞋</span>,适合在<span>冬季</span>
+								</p>
+							</div>
+							<div class="buttons">
+								<button>识别</button>
+								<button>开始放入</button>
+							</div>
+						</div>
+						<div class="shoein-img">
+							<img src="img/default.jpg">
+						</div>
+					</div>
+				</div>
+				<div class="tab" id="shoeout">
+					<div class="title-bar">
+						<span>取鞋</span>
+					</div>
+					<div class="content">
+						<div class="left">
+							<div class="shoeout-filter">
+								<p>
+									<select id="sex">
+										<option value="man">男鞋</option>
+										<option value="woman">女鞋</option>
+										<option value="child">童鞋</option>
+									</select>
+								</p>
+								<p>
+									<select id="season">
+										<option value="chunqiu">春秋</option>
+										<option value="xia">夏季</option>
+										<option value="dong">冬季</option>
+									</select>
+								</p>
+							</div>
+							<div class="buttons">
+								<button>查找</button>
+								<button>智能推荐</button>
+							</div>
+						</div>
+						<div class="shoeout-img">
+							<div class="shoes-wrapper">
+								<img class="shoeout-img">
+								<img class="shoeout-img">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab" id="help">
+					<div class="title-bar">
+						<span>帮助</span>
+					</div>
+					<div class="content">
+						<div class="help-content">
+							<h2>取鞋</h2>
+							<p></p>
+						</div>
+						<div class="help-content">
+							<h2>放鞋</h2>
+							<p></p>
+						</div>
+						<div class="help-content">
+							<h2>关于鞋</h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="tab" id="information">
+					<div class="title-bar">
+						<span>查看所有</span>
+					</div>
+					<div class="content">
+						<div class="allshoes">
+							<img class="allshoes-img">
+							<img class="allshoes-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			
+		</footer>
+		<script type="text/javascript" src="vendor/jquery/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				init();
+			});
+
+			function init(){
+				$("span.nav_tab").click(function(){
+					navClick(this);
+				});
+				$("button.readmore").click(function(){
+					$("#spanhelp").trigger("click");
+				});
+				$("button.allshoes").click(function(){
+					$("#spaninformation").trigger("click");
+				});
+				$("button.btn-shoein").click(function(){
+					$("#spanshoein").trigger("click");
+				});
+				$("button.btn-shoeout").click(function(){
+					$("#spanshoeout").trigger("click");
+				});
+				$("#spanhome").trigger("click");
+			}
+
+			function navClick(obj){
+				var oldSpan = $("span.nav_tab.active");
+				var oldContent = $("#"+$(oldSpan).attr("data-target"));
+				var newSpan = $(obj);
+				var newContent = $("#"+$(newSpan).attr("data-target"));
+				changeContent(oldContent,newContent);
+				oldSpan.removeClass("active");
+				newSpan.addClass("active");
+			}
+
+			function changeContent(contentBefore,contentAfter){
+				$(contentBefore).fadeOut(300,function(){
+					$(contentAfter).fadeIn(300);
+				});
+			}
+		</script>
+	</body>
+</html>
