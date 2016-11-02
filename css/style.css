@@ -1,7 +1,244 @@
-header{
-	display:block;
-	height:50px;
-}
-div.tab{
-	display: none;
-}
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  margin-top: 10px;
+  font-family: "Microsoft YaHei","Arial"; }
+  body header {
+    width: 100%;
+    height: 18%; }
+    body header > div {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border-bottom: 1px solid; }
+      body header > div div {
+        width: 12%;
+        margin: 0 auto;
+        border-bottom: 5px solid #ffe30f; }
+        body header > div div img {
+          width: 50%;
+          margin-bottom: 8px; }
+  body div.wrapper {
+    height: 70%; }
+    body div.wrapper nav.navigate {
+      width: 80%;
+      margin: 10px auto;
+      text-align: center; }
+      body div.wrapper nav.navigate .nav_tab {
+        font-size: 20px;
+        width: 20%;
+        padding: 0 5%;
+        border-right: 1px solid;
+        color: #666;
+        cursor: pointer; }
+        body div.wrapper nav.navigate .nav_tab.active {
+          color: #333; }
+    body div.wrapper div.content {
+      height: 100%; }
+      body div.wrapper div.content div.tab {
+        display: none;
+        height: 100%; }
+        body div.wrapper div.content div.tab div.title-bar {
+          width: 80%;
+          display: flex;
+          margin: 0 auto;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          background: #000;
+          margin-bottom: 10px; }
+          body div.wrapper div.content div.tab div.title-bar span {
+            font-size: 20px;
+            color: #fff; }
+      body div.wrapper div.content .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background-color: #000; }
+      body div.wrapper div.content #home .homewrapper {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        height: 100%; }
+        body div.wrapper div.content #home .homewrapper .left-panel {
+          width: 60%;
+          height: 100%;
+          margin-right: 10px; }
+          body div.wrapper div.content #home .homewrapper .left-panel .welcome {
+            width: 100%;
+            height: 80%;
+            background-image: url("../image/welcome.jpg");
+            background-size: cover;
+            position: relative; }
+            body div.wrapper div.content #home .homewrapper .left-panel .welcome p {
+              top: 39%;
+              width: 100%;
+              text-align: center;
+              position: absolute;
+              color: #fff;
+              font-size: 25px; }
+          body div.wrapper div.content #home .homewrapper .left-panel .buttons {
+            height: 20%;
+            display: flex; }
+            body div.wrapper div.content #home .homewrapper .left-panel .buttons button {
+              width: 50%;
+              height: 100%;
+              margin: 3px;
+              border: none;
+              background: #242424;
+              color: #fff;
+              font-size: 20px;
+              cursor: pointer; }
+        body div.wrapper div.content #home .homewrapper .right-panel {
+          width: 40%;
+          height: 100%; }
+          body div.wrapper div.content #home .homewrapper .right-panel .panel-intro {
+            height: 50%;
+            background-color: #c9c9c9; }
+            body div.wrapper div.content #home .homewrapper .right-panel .panel-intro > div {
+              padding: 20px; }
+              body div.wrapper div.content #home .homewrapper .right-panel .panel-intro > div h2 {
+                text-align: center;
+                margin: 5px;
+                font-weight: 200; }
+              body div.wrapper div.content #home .homewrapper .right-panel .panel-intro > div p {
+                margin: 0;
+                padding: 10px 0; }
+                body div.wrapper div.content #home .homewrapper .right-panel .panel-intro > div p.detail {
+                  border-bottom: 1px solid #d1d1d1; }
+                body div.wrapper div.content #home .homewrapper .right-panel .panel-intro > div p button {
+                  float: right;
+                  background: transparent;
+                  border: none;
+                  font-size: 14px;
+                  color: #fff;
+                  cursor: pointer; }
+          body div.wrapper div.content #home .homewrapper .right-panel .panel-information {
+            height: 50%;
+            position: relative;
+            background-image: url("../image/shoes.jpg");
+            background-size: cover; }
+            body div.wrapper div.content #home .homewrapper .right-panel .panel-information div {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 40%; }
+              body div.wrapper div.content #home .homewrapper .right-panel .panel-information div button {
+                width: 100%;
+                height: 100%;
+                margin: 3px 0;
+                border: none;
+                background: #242424;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer; }
+      body div.wrapper div.content .content {
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto; }
+        body div.wrapper div.content .content .left {
+          width: 50%;
+          margin-right: 10px; }
+          body div.wrapper div.content .content .left .shoein-text, body div.wrapper div.content .content .left .shoeout-filter {
+            background-image: url("../image/smart-home.jpg");
+            background-size: cover;
+            position: relative;
+            height: 80%;
+            width: 100%; }
+            body div.wrapper div.content .content .left .shoein-text .text-div, body div.wrapper div.content .content .left .shoeout-filter .text-div {
+              padding: 15px;
+              position: absolute;
+              z-index: 1001;
+              width: 100%; }
+              body div.wrapper div.content .content .left .shoein-text .text-div p, body div.wrapper div.content .content .left .shoeout-filter .text-div p {
+                width: 100%;
+                text-align: center; }
+          body div.wrapper div.content .content .left .shoeout-filter p {
+            text-align: center; }
+          body div.wrapper div.content .content .left .buttons {
+            width: 100%;
+            height: 20%;
+            display: flex; }
+            body div.wrapper div.content .content .left .buttons button {
+              width: 50%;
+              height: 100%;
+              margin: 3px;
+              border: none;
+              background: #242424;
+              color: #fff;
+              font-size: 20px;
+              cursor: pointer; }
+        body div.wrapper div.content .content .right {
+          width: 50%;
+          padding: 15px; }
+          body div.wrapper div.content .content .right img {
+            width: calc(100% - 30px); }
+        body div.wrapper div.content .content .right.recommend-shoes {
+          width: 50%;
+          height: 100%;
+          padding: 0; }
+          body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap; }
+            body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper .imgdiv {
+              width: calc(50% - 20px);
+              height: 50%;
+              padding: 10px; }
+              body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper .imgdiv img {
+                width: 90%; }
+        body div.wrapper div.content .content .allshoes {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 100%;
+          overflow: auto; }
+          body div.wrapper div.content .content .allshoes .imgdiv {
+            width: calc(33% - 20px);
+            padding: 10px; }
+            body div.wrapper div.content .content .allshoes .imgdiv img {
+              width: 90%; }
+      body div.wrapper div.content #help .content {
+        display: block; }
+        body div.wrapper div.content #help .content .help-content {
+          width: 100%;
+          height: 30%;
+          background-color: #e9e9e9; }
+  body .nomargin-l {
+    margin-left: 0 !important; }
+  body .nomargin-r {
+    margin-right: 0 !important; }
+  body .select-normal {
+    width: 40%;
+    height: 34px;
+    margin: 0 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border: solid 1px #e6e6e6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    outline: none;
+    cursor: pointer;
+    background: url("../image/down-arrow-deep.png") 96%/10% no-repeat #fff;
+    background-size: 20px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    body .select-normal:hover {
+      box-shadow: 1px 1px 5px -1px #dfdfdf;
+      background-image: url("../image/down-arrow-deep.png"); }
+
+/*# sourceMappingURL=style.css.map */

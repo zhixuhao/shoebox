@@ -1,0 +1,319 @@
+$theme-yellow: #f5bc21;
+$theme-red: #ed7e68;
+$theme-green: #7ed1a5;
+$font-black-deep: #000000;
+$font-black: #333333;
+$font-gray-deep: #666666;
+$font-gray-normal: #999999;
+$font-gray-light: #c1c1c1;
+$bg-gray-normal: #f1f1f1;
+$bg-gray-hover: #f8f8f8;
+$bg-gray-light: #f9f9f9;   //不确定设计是这个意思
+$shadow-gray-normal: #dfdfdf;
+$border-gray-normal: #e6e6e6;
+html{
+	height:100%;
+}
+body{
+	height:100%;
+	margin:0;
+	margin-top:10px;
+	font-family:"Microsoft YaHei","Arial";
+	header{
+		width:100%;
+		height:18%;
+		>div{
+			width:100%;
+			height:100%;
+			text-align:center;
+			border-bottom:1px solid;
+			div{
+				width:12%;
+				margin:0 auto;
+				img{
+					width:50%;
+					margin-bottom:8px;
+				}
+				border-bottom:5px solid rgba(255, 227, 15, 1);
+			}
+		}
+	}
+	div.wrapper{
+		height:70%;
+		nav.navigate{
+			width:80%;
+			margin:10px auto;
+			text-align:center;
+			.nav_tab{
+				font-size:20px;
+				width:20%;
+				padding:0 5%;
+				border-right:1px solid;
+				color:#666;
+				cursor:pointer;
+				&.active{
+					color:#333;
+				}
+			}
+		}
+		div.content{
+			height:100%;
+			div.tab{
+				display:none;
+				height:100%;
+				div.title-bar{
+					width:80%;
+					display:flex;
+					margin:0 auto;
+					align-items:center;
+					justify-content:center;
+					height:50px;
+					background:#000;
+					margin-bottom:10px;
+					span{
+						font-size:20px;
+						color:#fff;
+					}
+				}
+			}
+			.mask{
+					position:absolute;
+					width:100%;
+					height:100%;
+					opacity:0.5;
+					background-color:#000;
+				}
+			#home{
+				.homewrapper{
+					display:flex;
+					justify-content:center;
+					width:80%;
+					margin:0 auto;
+					height:100%;
+					.left-panel{
+						width:60%;
+						height:100%;
+						margin-right:10px;
+						.welcome{
+							width:100%;
+							height:80%;
+							background-image:url("../image/welcome.jpg");
+							background-size:cover;
+							position:relative;
+							p{
+								top:39%;
+								width:100%;
+								text-align:center;
+								position:absolute;
+								color:#fff;
+								font-size:25px;
+							}
+						}
+						.buttons{
+							height:20%;
+							display:flex;
+							button{
+								width:50%;
+								height:100%;
+								margin:3px;
+								border:none;
+								background:#242424;
+								color:#fff;
+								font-size:20px;
+								cursor:pointer;
+							}
+						}
+					}
+					.right-panel{
+						width:40%;
+						height:100%;
+						.panel-intro{
+							height:50%;
+							background-color:#c9c9c9;
+							>div{
+								padding:20px;
+								h2{
+									text-align:center;
+									margin:5px;
+									font-weight:200;
+								}
+								p{
+									&.detail{
+										border-bottom:1px solid rgba(209, 209, 209, 1);
+									}
+									margin:0;
+									padding:10px 0;
+									button{
+										float:right;
+										background:transparent;
+										border:none;
+										font-size:14px;
+										color:#fff;
+										cursor:pointer;
+									}
+								}
+							}
+						}
+						.panel-information{
+							height:50%;
+							position:relative;
+							background-image:url("../image/shoes.jpg");
+							background-size:cover;
+							div{
+								position:absolute;
+								bottom:0;
+								width:100%;
+								height:40%;
+								button{
+									width:100%;
+									height:100%;
+									margin:3px 0;
+									border:none;
+									background:#242424;
+									color:#fff;
+									font-size:20px;
+									cursor:pointer;
+								}
+							}
+						}
+					}
+				}
+			}
+				.content{
+					height:80%;
+					display:flex;
+					justify-content:center;
+					width:80%;
+					margin:0 auto;
+					.left{
+						width:50%;
+						margin-right:10px;
+						.shoein-text,.shoeout-filter{
+							background-image:url("../image/smart-home.jpg");
+							background-size:cover;
+							position:relative;
+							height:80%;
+							width:100%;
+							.text-div{
+								padding:15px;
+								position:absolute;
+								z-index:1001;
+								width:100%;
+								p{
+									width:100%;
+									text-align:center;
+								}
+							}
+						}
+						.shoeout-filter{
+							p{
+								text-align:center;
+							}
+						}
+						.buttons{
+							width:100%;
+							height:20%;
+							display:flex;
+							button{
+								width:50%;
+								height:100%;
+								margin:3px;
+								border:none;
+								background:#242424;
+								color:#fff;
+								font-size:20px;
+								cursor:pointer;
+							}
+						}
+					}
+					.right{
+						width:50%;
+						padding:15px;
+						img{
+							width:calc(100% - 30px);
+						}
+					}
+					.right.recommend-shoes{
+						width:50%;
+						height:100%;
+						padding:0;
+						.shoes-wrapper{
+							width:100%;
+							height:100%;
+							display:flex;
+							flex-wrap:wrap;
+							.imgdiv{
+								width:calc(50% - 20px);
+								height:50%;
+								padding:10px;
+								img{
+									width:90%;
+								}
+							}
+						}
+					}
+					.allshoes{
+						display:flex;
+						flex-wrap:wrap;
+						width:100%;
+						height:100%;
+						overflow:auto;
+						.imgdiv{
+							width:calc(33% - 20px);
+							padding:10px;
+							img{
+								width:90%;
+							}
+						}
+					}
+				}
+				#help{
+					.content{
+						display:block;
+						.help-content{
+							width:100%;
+							height:30%;
+							background-color:#e9e9e9;
+						}
+					}
+				}
+		}
+	}
+	.nomargin-l{
+		margin-left:0 !important;
+	}
+	.nomargin-r{
+		margin-right:0 !important;
+	}
+	.select-normal {
+	  width: 40%;
+	  height: 34px;
+	  margin:0 10px;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  -ms-appearance: none;
+	  appearance: none;
+	  border: solid 1px $border-gray-normal;
+	  border-radius: 3px;
+	  box-sizing: border-box;
+	  padding: 0 0 0 10px;
+	  outline: none;
+	  cursor: pointer;
+	  background: url("../image/down-arrow-deep.png") 96% / 10% no-repeat #fff;
+	  background-size: 20px;
+	  -webkit-transition: all .2s ease;
+	  -moz-transition: all .2s ease;
+	  -ms-transition: all .2s ease;
+	  -o-transition: all .2s ease;
+	  transition: all .2s ease;
+	  &:hover {
+	    box-shadow: 1px 1px 5px -1px $shadow-gray-normal;
+	    background-image: url("../image/down-arrow-deep.png");
+	  }
+	}
+}
+
+
+
+
+

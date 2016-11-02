@@ -8,7 +8,9 @@
 	<body>
 		<header>
 			<div>
-				<img src="">
+				<div>
+					<img src="image/shoe.png">
+				</div>
 				<p>智能鞋柜</p>
 			</div>
 		</header>
@@ -18,29 +20,31 @@
 				<span class="nav_tab" data-target="shoein" id="spanshoein">放鞋</span>
 				<span class="nav_tab" data-target="shoeout" id="spanshoeout">取鞋</span>
 				<span class="nav_tab" data-target="help" id="spanhelp">帮助</span>
-				<span class="nav_tab" data-target="information" id="spaninformation">信息</span>
+				<span class="nav_tab" data-target="information" id="spaninformation" style="border-right: none">信息</span>
 			</nav>
 			<div class="content">
 				<div class="tab" id="home">
 					<div class="homewrapper">
 						<div class="left-panel">
 							<div class="welcome">
-								<h1>欢迎使用</h1>
+								<div class="mask"></div>
+								<p>欢迎使用</p>
 							</div>
 							<div class="buttons">
-								<button class="btn-shoein">取鞋</button>
-								<button class="btn-shoeout">放鞋</button>
+								<button class="btn-shoein nomargin-l">取鞋 ></button>
+								<button class="btn-shoeout nomargin-r">放鞋 ></button>
 							</div>
 						</div>
 						<div class="right-panel">
 							<div class="panel-intro">
-								<h2>智能鞋柜介绍</h2>
-								<p>本产品详细介绍</p>
-								<p><button class="readmore">详细介绍</button></p>
+								<div>
+									<h2>智能鞋柜介绍</h2>
+									<p class="detail">本产品详细介绍本产品详细介绍本产品详细介绍本产品详细介绍本产品详细介绍本产品详细介绍</p>
+									<p style="margin: 0"><button class="readmore">阅读更多 >></button></p>
+								</div>
 							</div>
 							<div class="panel-information">
-								<div class="mask"></div>
-								<p><button class="allshoes">查看所有</button></p>
+								<div><button class="allshoes">查看所有 ></button></div>
 							</div>
 						</div>
 					</div>
@@ -52,20 +56,23 @@
 					<div class="content">
 						<div class="left">
 							<div class="shoein-text">
-								<p class="shoein-guide">
-									放鞋指导
-								</p>
-								<p class="shoein-information">
-									这是一双<span>男鞋</span>,适合在<span>冬季</span>
-								</p>
+								<div class="mask"></div>
+								<div class="text-div">
+									<p class="shoein-guide">
+										放鞋指导
+									</p>
+									<p class="shoein-information">
+										这是一双<span>男鞋</span>,适合在<span>冬季</span>
+									</p>
+								</div>
 							</div>
 							<div class="buttons">
-								<button>识别</button>
-								<button>开始放入</button>
+								<button class="nomargin-l">识别</button>
+								<button class="nomargin-r">开始放入</button>
 							</div>
 						</div>
-						<div class="shoein-img">
-							<img src="img/default.jpg">
+						<div class="right">
+							<img src="image/default.jpeg">
 						</div>
 					</div>
 				</div>
@@ -76,30 +83,42 @@
 					<div class="content">
 						<div class="left">
 							<div class="shoeout-filter">
-								<p>
-									<select id="sex">
+								<div class="mask"></div>
+								<div class="text-div">
+									<p>
+									<select id="sex" class="select-normal">
 										<option value="man">男鞋</option>
 										<option value="woman">女鞋</option>
 										<option value="child">童鞋</option>
 									</select>
-								</p>
-								<p>
-									<select id="season">
+								
+									<select id="season" class="select-normal">
 										<option value="chunqiu">春秋</option>
 										<option value="xia">夏季</option>
 										<option value="dong">冬季</option>
 									</select>
-								</p>
+									</p>
+								</div>
 							</div>
 							<div class="buttons">
-								<button>查找</button>
-								<button>智能推荐</button>
+								<button class="nomargin-l">查找</button>
+								<button class="nomargin-r">智能推荐</button>
 							</div>
 						</div>
-						<div class="shoeout-img">
+						<div class="right recommend-shoes">
 							<div class="shoes-wrapper">
-								<img class="shoeout-img">
-								<img class="shoeout-img">
+								<div class="imgdiv">
+									<img class="shoeout-img" src="image/converse.jpg">
+								</div>
+								<div class="imgdiv">
+									<img class="shoeout-img" src="image/converse.jpg">
+								</div>
+								<div class="imgdiv">
+									<img class="shoeout-img" src="image/converse.jpg">
+								</div>
+								<div class="imgdiv">
+									<img class="shoeout-img" src="image/converse.jpg">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -129,8 +148,33 @@
 					</div>
 					<div class="content">
 						<div class="allshoes">
-							<img class="allshoes-img">
-							<img class="allshoes-img">
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
+							<div class="imgdiv">
+								<img class="shoeout-img" src="image/converse.jpg">
+							</div>
 						</div>
 					</div>
 				</div>
