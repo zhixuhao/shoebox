@@ -4,6 +4,7 @@
 	<title>智能鞋柜</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/bootstrap.min.css">
 </head>
 	<body>
 		<header>
@@ -11,7 +12,6 @@
 				<div>
 					<img src="image/shoe.png">
 				</div>
-				<p>智能鞋柜</p>
 			</div>
 		</header>
 		<div class="wrapper">
@@ -107,16 +107,20 @@
 						</div>
 						<div class="right recommend-shoes">
 							<div class="shoes-wrapper">
-								<div class="imgdiv">
+								<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+									<div class="mask"><button>查看详情</button></div>
 									<img class="shoeout-img" src="image/converse.jpg">
 								</div>
-								<div class="imgdiv">
+								<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+									<div class="mask"><button>查看详情</button></div>
 									<img class="shoeout-img" src="image/converse.jpg">
 								</div>
-								<div class="imgdiv">
+								<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+									<div class="mask"><button>查看详情</button></div>
 									<img class="shoeout-img" src="image/converse.jpg">
 								</div>
-								<div class="imgdiv">
+								<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+									<div class="mask"><button>查看详情</button></div>
 									<img class="shoeout-img" src="image/converse.jpg">
 								</div>
 							</div>
@@ -148,31 +152,40 @@
 					</div>
 					<div class="content">
 						<div class="allshoes">
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
-							<div class="imgdiv">
+							<div class="imgdiv" data-toggle="modal" data-target="#myModal">
+								<div class="mask"><button>查看详情</button></div>
 								<img class="shoeout-img" src="image/converse.jpg">
 							</div>
 						</div>
@@ -180,10 +193,42 @@
 				</div>
 			</div>
 		</div>
+		<div id="myModal" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					取鞋
+				</h4>
+				</div>
+				<div class="modal-body">
+					<div class="shoe">
+						<img src="image/converse.jpg">
+					</div>
+					<div class="information">
+						<p>
+							这是一双康威
+						</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button type="button" class="btn btn-primary">
+						确定
+					</button>
+				</div>
+			</div>
+			</div>
+		</div>
 		<footer>
 			
 		</footer>
 		<script type="text/javascript" src="vendor/jquery/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
 		<script>
 			$(function(){
 				init();

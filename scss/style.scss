@@ -21,7 +21,7 @@ body{
 	font-family:"Microsoft YaHei","Arial";
 	header{
 		width:100%;
-		height:18%;
+		height:12%;
 		>div{
 			width:100%;
 			height:100%;
@@ -76,12 +76,44 @@ body{
 					}
 				}
 			}
+			.imgdiv{
+				padding:10px;
+				position:relative;
+				cursor:pointer;
+				&:hover{
+					.mask{
+						opacity:0.5;
+					}
+				}
+				img{
+					width:90%;
+				}
+			}
 			.mask{
 					position:absolute;
 					width:100%;
 					height:100%;
-					opacity:0.5;
+					opacity:0;
+					display:flex;
 					background-color:#000;
+					align-items:center;
+					justify-content:center;
+					transition:all .2s ease;
+					button{
+						width:40%;
+						height:20%;
+						color:white;
+						border:1px solid white;
+						background:transparent;
+						border-radius:5px;
+						font-size:16px;
+						transition:all .2s ease;
+						cursor:pointer;
+						&:hover{
+							background:white;
+							color:black;
+						}
+					}
 				}
 			#home{
 				.homewrapper{
@@ -246,6 +278,13 @@ body{
 								width:calc(50% - 20px);
 								height:50%;
 								padding:10px;
+								position:relative;
+								cursor:pointer;
+								&:hover{
+									.mask{
+										opacity:0.5;
+									}
+								}
 								img{
 									width:90%;
 								}
@@ -259,6 +298,7 @@ body{
 						height:100%;
 						overflow:auto;
 						.imgdiv{
+
 							width:calc(33% - 20px);
 							padding:10px;
 							img{
@@ -310,6 +350,28 @@ body{
 	    box-shadow: 1px 1px 5px -1px $shadow-gray-normal;
 	    background-image: url("../image/down-arrow-deep.png");
 	  }
+	}
+	#myModal{
+		.modal-content{
+			.modal-body{
+				display:flex;
+				.shoe{
+					width:50%;
+					padding:10px;
+					img{
+						width:90%;
+					}
+				}
+				.infromation{
+					width:50%;
+				}
+			}
+			.modal-footer{
+				button{
+					width:20%;
+				}
+			}
+		}
 	}
 }
 

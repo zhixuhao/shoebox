@@ -8,7 +8,7 @@ body {
   font-family: "Microsoft YaHei","Arial"; }
   body header {
     width: 100%;
-    height: 18%; }
+    height: 12%; }
     body header > div {
       width: 100%;
       height: 100%;
@@ -53,12 +53,37 @@ body {
           body div.wrapper div.content div.tab div.title-bar span {
             font-size: 20px;
             color: #fff; }
+      body div.wrapper div.content .imgdiv {
+        padding: 10px;
+        position: relative;
+        cursor: pointer; }
+        body div.wrapper div.content .imgdiv:hover .mask {
+          opacity: 0.5; }
+        body div.wrapper div.content .imgdiv img {
+          width: 90%; }
       body div.wrapper div.content .mask {
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
-        background-color: #000; }
+        opacity: 0;
+        display: flex;
+        background-color: #000;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s ease; }
+        body div.wrapper div.content .mask button {
+          width: 40%;
+          height: 20%;
+          color: white;
+          border: 1px solid white;
+          background: transparent;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: all .2s ease;
+          cursor: pointer; }
+          body div.wrapper div.content .mask button:hover {
+            background: white;
+            color: black; }
       body div.wrapper div.content #home .homewrapper {
         display: flex;
         justify-content: center;
@@ -192,7 +217,11 @@ body {
             body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper .imgdiv {
               width: calc(50% - 20px);
               height: 50%;
-              padding: 10px; }
+              padding: 10px;
+              position: relative;
+              cursor: pointer; }
+              body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper .imgdiv:hover .mask {
+                opacity: 0.5; }
               body div.wrapper div.content .content .right.recommend-shoes .shoes-wrapper .imgdiv img {
                 width: 90%; }
         body div.wrapper div.content .content .allshoes {
@@ -240,5 +269,16 @@ body {
     body .select-normal:hover {
       box-shadow: 1px 1px 5px -1px #dfdfdf;
       background-image: url("../image/down-arrow-deep.png"); }
+  body #myModal .modal-content .modal-body {
+    display: flex; }
+    body #myModal .modal-content .modal-body .shoe {
+      width: 50%;
+      padding: 10px; }
+      body #myModal .modal-content .modal-body .shoe img {
+        width: 90%; }
+    body #myModal .modal-content .modal-body .infromation {
+      width: 50%; }
+  body #myModal .modal-content .modal-footer button {
+    width: 20%; }
 
 /*# sourceMappingURL=style.css.map */
