@@ -181,10 +181,14 @@ body {
               padding: 15px;
               position: absolute;
               z-index: 1001;
-              width: 100%; }
+              width: 100%;
+              color: white;
+              font-size: 18px; }
               body div.wrapper div.content .content .left .shoein-text .text-div p, body div.wrapper div.content .content .left .shoeout-filter .text-div p {
                 width: 100%;
                 text-align: center; }
+                body div.wrapper div.content .content .left .shoein-text .text-div p select, body div.wrapper div.content .content .left .shoeout-filter .text-div p select {
+                  color: black; }
           body div.wrapper div.content .content .left .shoeout-filter p {
             text-align: center; }
           body div.wrapper div.content .content .left .buttons {

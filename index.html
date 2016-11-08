@@ -56,7 +56,7 @@
 					<div class="content">
 						<div class="left">
 							<div class="shoein-text">
-								<div class="mask"></div>
+								<div class="mask" style="opacity: 0.5"></div>
 								<div class="text-div">
 									<p class="shoein-guide">
 										放鞋指导
@@ -67,8 +67,8 @@
 								</div>
 							</div>
 							<div class="buttons">
-								<button class="nomargin-l">识别</button>
-								<button class="nomargin-r">开始放入</button>
+								<button class="nomargin-l" id="recognize">识别</button>
+								<button class="nomargin-r" id="startShoeIn">开始放入</button>
 							</div>
 						</div>
 						<div class="right">
@@ -83,7 +83,7 @@
 					<div class="content">
 						<div class="left">
 							<div class="shoeout-filter">
-								<div class="mask"></div>
+								<div class="mask" style="opacity: 0.5"></div>
 								<div class="text-div">
 									<p>
 									<select id="sex" class="select-normal">
@@ -101,8 +101,8 @@
 								</div>
 							</div>
 							<div class="buttons">
-								<button class="nomargin-l">查找</button>
-								<button class="nomargin-r">智能推荐</button>
+								<button class="nomargin-l" id="search">查找</button>
+								<button class="nomargin-r" id="recommend">智能推荐</button>
 							</div>
 						</div>
 						<div class="right recommend-shoes">
@@ -215,10 +215,10 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消
 					</button>
-					<button type="button" class="btn btn-primary">
-						确定
+					<button type="button" class="btn btn-primary" id="shoeOut">
+						取鞋
 					</button>
 				</div>
 			</div>
@@ -267,6 +267,9 @@
 				$(contentBefore).fadeOut(300,function(){
 					$(contentAfter).fadeIn(300);
 				});
+			}
+			function request(url,method,postdata){
+				
 			}
 		</script>
 	</body>
